@@ -2,7 +2,7 @@
 //  Created by Hugin on 16/8/31.
 //  Copyright © 2016年 Hugin. All rights reserved.
 //
-//  GitHub: https://github.com/HuginChen
+//  GitHub: https://github.com/HuginChen/GGFMDB.git
 //
 
 #import "GGFMDB.h"
