@@ -170,7 +170,7 @@
         dic = parameters;
     }else {
         // model转dic
-        dic = [self getModelPropertyKeyValue:parameters tableName:tableName clomnArr:columnArr];
+        dic = [self getModelPropertyKeyValue:parameters clomnArr:columnArr];
     }
     
     NSMutableString *finalStr = [[NSMutableString alloc] initWithFormat:@"INSERT INTO %@ (", tableName];
@@ -217,7 +217,7 @@
         dic = parameters;
     }else {
         // model转dic
-        dic = [self getModelPropertyKeyValue:parameters tableName:tableName clomnArr:columnArr];
+        dic = [self getModelPropertyKeyValue:parameters clomnArr:columnArr];
     }
     
     NSMutableString *finalStr = [[NSMutableString alloc] initWithFormat:@"update %@ set ", tableName];
@@ -560,7 +560,7 @@
 }
 
 // 获取model的key和value
-- (NSDictionary *)getModelPropertyKeyValue:(id)model tableName:(NSString *)tableName clomnArr:(NSArray *)clomnArr
+- (NSDictionary *)getModelPropertyKeyValue:(id)model clomnArr:(NSArray *)clomnArr
 {
     NSMutableDictionary *mDic = [NSMutableDictionary dictionaryWithCapacity:0];
     // 属性列表次数
